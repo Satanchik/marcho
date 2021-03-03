@@ -1,9 +1,32 @@
 .partners{
    padding-top: 75px;
    &__list{
-      height: 170px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      min-height: 170px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 20px;
+   }
+   &__item{
+      img{
+         margin: 0 auto;
+      }
+   }
+}
+
+@media (max-width: 620px){
+   .partners{
+      padding: 60px 0;
+      &__list{
+         grid-template-columns: repeat(3, 1fr);
+         grid-template-rows: auto;
+      }
+   }
+}
+
+@media (max-width: 450px){
+   .partners{
+      &__list{
+         grid-template-columns: repeat(2, 1fr);
+      }
    }
 }
