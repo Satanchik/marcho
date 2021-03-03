@@ -1,0 +1,17 @@
+.related{
+   padding: 50px 0 120px;
+   &__title{
+      margin-bottom: 50px;
+   }
+   &__items{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 30px;
+      .product-item__img-box{
+         height: auto;
+      }
+      .product-item__title{
+         padding: 5px 0;
+      }
+   }
+}

@@ -1,0 +1,11 @@
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
+<script>
+   let map;
+
+   function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+         center: { lat: 40.768446387035745, lng: -73.97912360069795 },
+         zoom: 13,
+      });
+   }
+</script>
