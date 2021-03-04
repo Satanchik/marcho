@@ -98,3 +98,55 @@
       border: none;
    }
 }
+
+@media (max-width: 1100px){
+   .contact{
+      &__inner{
+         display: block;
+      }
+      &__info{
+         margin-right: 0;
+         max-width: 100%;
+         margin-bottom: 30px;
+      }
+      &__form{
+         box-shadow: none;
+         padding: 0;
+      }
+      &__form-box{
+         display: block;
+         input{
+            width: 100%;
+         }
+      }
+   }
+}
+
+@media (max-width: 450px){
+   .contact{
+      &__info-title{
+         font-size: 28px;
+         line-height: 34px;
+      }
+   }
+}
+
+@media (max-width: 375px){
+   .contact{
+      &__info-item{
+         padding-left: 55px;
+         &::before{
+            top: 1px;
+            width: 50px;
+            height: 50px;
+         }
+         &::after{
+            top: 16px;
+            left: 16px;
+         }
+      }
+      &__info-item--location::after{
+         left: 19px;
+      }
+   }
+}

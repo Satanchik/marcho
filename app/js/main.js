@@ -3,6 +3,12 @@ $(function(){
    $('.menu__btn').on('click', function(){
       $('.menu__list').toggleClass('menu__list--active');
    });
+
+
+   $('.shop__filter-btn').on('click', function(){
+      $('.shop__filters').slideToggle()
+   });
+
    
    $('.blog-page__slider').slick({
       prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="7pt" height="14pt" viewBox="0 0 7 14" version="1.1"><g><path d="M 0.0195312 6.957031 C 0.0195312 6.707031 0.105469 6.464844 0.269531 6.273438 L 5.507812 0.28125 C 5.652344 0.09375 5.875 -0.015625 6.113281 -0.015625 C 6.347656 -0.015625 6.570312 0.09375 6.714844 0.28125 C 7.050781 0.675781 7.050781 1.253906 6.714844 1.652344 L 2.082031 6.957031 L 6.714844 12.265625 C 7.046875 12.664062 7.046875 13.246094 6.714844 13.648438 C 6.566406 13.828125 6.34375 13.933594 6.109375 13.933594 C 5.878906 13.933594 5.65625 13.828125 5.507812 13.648438 L 0.269531 7.65625 C 0.105469 7.460938 0.0195312 7.214844 0.0195312 6.957031 Z M 0.0195312 6.957031 "/></g></svg></button>',
@@ -33,6 +39,14 @@ $(function(){
       draggable: false,
       arrows: false,
       fade: true,
+      responsive: [
+         {
+            breakpoint: 1051,
+            settings: {
+               draggable: true,
+            }
+         },
+      ]
    });
 
    $('.shop-content__filter-btn').on('click', function () {
@@ -42,10 +56,12 @@ $(function(){
 
    $('.button-list').on('click', function () {
       $('.product-item').addClass('product-item--list');
+      $('.shop-content__inner').addClass('shop-content__inner-flex');
    });
 
    $('.button-grid').on('click', function () {
       $('.product-item').removeClass('product-item--list');
+      $('.shop-content__inner').removeClass('shop-content__inner-flex');
    });
 
 

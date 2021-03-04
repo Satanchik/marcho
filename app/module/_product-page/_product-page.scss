@@ -400,3 +400,128 @@
 .star{
    margin: 0 auto;
 }
+
+@media (max-width: 1230px){
+   .product-slide{
+      &__thumb{
+         display: none;
+      }
+   }
+   .product-one{
+      &__slide{
+         width: auto;
+         margin-right: 0;
+      }
+   }
+   .comments-form{
+      &__text-input{
+         width: 100%;
+      }
+      &__text-input + .comments-form__text-input{
+         margin-left: 30px;
+      }
+   }
+}
+
+@media (max-width: 1050px){
+   .product-one{
+      &__inner{
+         display: block;
+      }
+      &__content{
+         width: 100%;
+         margin-top: 35px;
+      }
+   }
+   .product-slide{
+      &__big{
+         width: 100%;
+         img{
+            width: auto;
+            margin: 0 auto;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px){
+   .comments-form{
+      &__box-input{
+         display: block;
+         margin-bottom: 0;
+      }
+      &__text-input{
+         margin-bottom: 30px;
+      }
+      &__text-input + .comments-form__text-input{
+         margin-left: 0px;
+      }
+      &__label{
+         margin-right: 0;
+         display: block;
+      }
+      &__rating-title{
+         margin-bottom: 20px;
+         display: inline-block;
+      }
+   }
+}
+
+@media (max-width: 500px){
+   .product-tabs{
+      &__top-item{
+         display: block;
+         margin-bottom: 15px;
+         + .product-tabs__top-item{
+            margin-left: 0;
+         }
+      }
+   }
+}
+
+@media (max-width: 450px){
+   .product-page{
+      padding: 60px 0;
+   }
+   .product-one{
+      &__box{
+         display: block;
+      }
+      &__price{
+         margin-bottom: 5px;
+         padding-left: 5px;
+      }
+      &__btn{
+         margin-left: 0;
+         padding: 13px 23px;
+      }
+      &__star{
+         .star{
+            margin: 0px 0px;
+         }
+      }
+   }
+   .product-slide{
+      &__big img{
+         height: 400px;
+      }
+   }
+   .product-filter__size label{
+      margin-right: -1px;
+   }
+   .comments{
+      &__content-date{
+         display: none;
+      }
+      &__img{
+         display: none;
+      }
+      .star{
+            margin-right: 0;
+         }
+   }
+}
+
+
+
+

@@ -1,4 +1,17 @@
 .shop{
+   &__filter-btn{
+      display: none;
+      &::before{
+         content: "";
+         position: absolute;
+         width: 47px;
+         height: 47px;
+         top: 7px;
+         left: 7px;
+         background-image: url('../images/icons/filter.svg');
+         background-repeat: no-repeat;
+      }
+   }
    padding: 120px 0 105px;
    &__inner{
       display: flex;
@@ -270,4 +283,80 @@
    height: 5px;
    border: none;
    background-image: url('../images/icons/angle-down.svg');
+}
+
+@media (max-width: 1230px){
+   .shop{
+      &__filter-btn{
+         display: block;
+         border: none;
+         background-color: $accent;
+         padding: 0;
+         width: 60px;
+         height: 60px;
+         cursor: pointer;
+         position: fixed;
+         right: 0;
+         bottom: 50px;
+         z-index: 101;
+      }
+      &__inner{
+         display: block;
+      }
+      &__filters{
+         width: 100%;
+         margin-right: 0;
+         display: none;
+         position: absolute;
+         top: 20px;
+         left: 0;
+         z-index: 100;
+         background: #fff;
+      }
+   }
+   .shop-content{
+      &__inner{
+         display: grid;
+         grid-gap: 30px;
+         grid-template-columns: repeat(3, 1fr);
+      }
+      &__inner-flex{
+         display: flex;
+      }
+   }
+}
+
+@media (max-width: 860px){
+   .shop-content{
+      &__inner{
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+}
+
+@media (max-width: 700px){
+   .shop-content{
+      &__filter-buttons{
+         display: none;
+      }
+      &__filter{
+         padding-left: 0;
+      }
+   }
+}
+
+@media (max-width: 620px){
+   .shop-content{
+      &__inner{
+         grid-template-columns: repeat(1, 1fr);
+      }
+   }
+}
+
+@media (max-width: 450px){
+   .pagination{
+      &__arrow{
+         display: none;
+      }
+   }
 }
