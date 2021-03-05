@@ -22,3 +22,29 @@ $bg:  #f6f6f6;
    font-family: 'Roboro-Bold', sans-serif;
    font-weight: 700;
 }
+
+%btn{
+   background-color: $accent;
+   text-transform: uppercase;
+   color: #fff;
+   padding: 12px 26px;
+   @extend %roboto-400;
+   box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+   cursor: pointer;
+}
+
+%checkbox-hidden,
+%radio-hidden{
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+   clip: rect(0 0 0 0);
+   position: absolute;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}x(#{$numbers});
+}

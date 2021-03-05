@@ -1,0 +1,152 @@
+
+.contact{
+   padding-bottom: 120px;
+   &__inner{
+      display: flex;
+   }
+   &__info{
+      max-width: 370px;
+      margin-right: 30px;
+   }
+   &__info-title{
+      @extend %roboto-700;
+      font-size: 48px;
+      line-height: 58px;
+      color: $title;
+      margin-bottom: 20px;
+   }
+   &__info-text{
+      margin-bottom: 60px;
+   }
+   &__info-item{
+      margin-top: 55px;
+      color: $title;
+      padding-left: 80px;
+      position: relative;
+      &::before{
+         content: "";
+         position: absolute;
+         left: 0;
+         top: -5px;
+         width: 60px;
+         height: 60px;
+         box-shadow: 0px 5px 20px 0px rgba(146, 146, 146, 0.3);
+      }
+      &::after{
+         content: "";
+         position: absolute;
+         width: 20px;
+         height: 20px;
+         background-image: url('../images/icons/phone-icon.svg');
+         left: 20px;
+         top: 15px;
+      }
+   }
+   &__info-item--location::after{
+      background-image: url('../images/icons/location-icon.svg');
+      width: 14px;
+      left: 23px;
+   }
+   &__info-item--email::after{
+      background-image: url('../images/icons/email-icon.svg');
+      width: 18px;
+      left: 21px;
+   }
+   &__info-phone{
+      display: block;
+      color: $title;
+   }
+   &__form{
+      padding: 60px 40px;
+      box-shadow: 0px 5px 20px 0px rgba(146, 146, 146, 0.3);
+      width: 100%;
+   }
+   &__form-title{
+      margin-bottom: 20px;
+      font-size: 22px;
+      color: $title;
+      @extend %roboto-700;
+   }
+   &__form-input{
+      width: 100%;
+      display: block;
+      height: 60px;
+      background-color: $bg;
+      border: none;
+      padding: 0 24px;
+      margin-bottom: 30px;
+   }
+   &__form-textarea{
+      width: 100%;
+      display: block;
+      resize: none;
+      height: 200px;
+      background-color: $bg;
+      border: none;
+      padding: 24px;
+      margin-bottom: 30px;
+   }
+   &__form-box{
+      display: flex;
+      justify-content: space-between;  
+      input{
+         width: 330px;
+      }
+   }
+   &__form-btn{
+      @extend %btn;
+      border: none;
+   }
+}
+
+@media (max-width: 1100px){
+   .contact{
+      &__inner{
+         display: block;
+      }
+      &__info{
+         margin-right: 0;
+         max-width: 100%;
+         margin-bottom: 30px;
+      }
+      &__form{
+         box-shadow: none;
+         padding: 0;
+      }
+      &__form-box{
+         display: block;
+         input{
+            width: 100%;
+         }
+      }
+   }
+}
+
+@media (max-width: 450px){
+   .contact{
+      &__info-title{
+         font-size: 28px;
+         line-height: 34px;
+      }
+   }
+}
+
+@media (max-width: 375px){
+   .contact{
+      &__info-item{
+         padding-left: 55px;
+         &::before{
+            top: 1px;
+            width: 50px;
+            height: 50px;
+         }
+         &::after{
+            top: 16px;
+            left: 16px;
+         }
+      }
+      &__info-item--location::after{
+         left: 19px;
+      }
+   }
+}
