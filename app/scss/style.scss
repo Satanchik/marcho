@@ -1489,7 +1489,7 @@
       justify-content: space-between;
    }
    &__text-input{
-      width: 570px;
+      width: 370px;
       display: inline-block;
       height: 50px;
       padding: 0 20px;
@@ -1782,6 +1782,9 @@
    }
    .comments-form{
       border-bottom: none;
+      &__text-input{
+         width: 370px;
+      }
    }
    &__box{
       margin: 25px 0 35px;
